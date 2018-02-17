@@ -1,0 +1,35 @@
+h1 {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    padding-top: 2em;
+    padding-bottom: 3em;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+
+.header__left > svg {
+    font-size: 2rem;
+    margin-right: .5em;
+    position: relative;
+    top: -4px;
+}
+
+.header__right {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header__right > svg {
+    font-size: 2rem;
+    padding-left: .5em;
+}
+
