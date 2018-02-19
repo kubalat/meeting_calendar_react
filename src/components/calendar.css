@@ -4,4 +4,21 @@
     height: 500px;
     box-shadow: 0px 0px 10px 0px #e7e7e7;
     border-radius: 10px;
+    padding: 1em;
+}
+
+.calendar__head { 
+    display: flex;
+}
+
+.calendar__time {
+    width: 9%;
+    height: 10px;
+    border: 1px solid black;
+}
+
+.calendar__day {
+    width: 13%;
+    height: 10px;
+    border: 1px solid black;
 }
