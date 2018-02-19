@@ -6,7 +6,7 @@ export default class Header extends Component {
         return (
             <div className="header">
                 <div className="header__left">
-                    <i className="fas fa-calendar-alt"></i><h1>Room Calendar</h1>
+                    <i className="fas fa-calendar-alt"></i><h1>Meeting Calendar</h1>
                 </div>
                 <div className="header__right">
                     <div className="no-user">Not logged user</div>
