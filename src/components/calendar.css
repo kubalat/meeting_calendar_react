@@ -77,5 +77,15 @@
     border-radius: 5px;
 }
 
+.calendar .event__dialog {
+    position: absolute;
+    background: white;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0px 0px 36px 7px #c9c9c9;
+    padding: 1em;
+    border-radius: 10px;
+}
+
 
 
