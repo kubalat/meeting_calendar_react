@@ -6,21 +6,58 @@
     padding: 1em;
 }
 
-.calendar__header {
+.calendar__dates {
     display: flex;
     margin-bottom: 1em;
     
 }
 
-.calendar__header > .header__time {
+#test {
+    width: 10px; height: 10px; border: 1px solid black;
+}
+
+.calendar__dates > .header__time {
     width: 6%;
 }
 
-.calendar__header > .header__day {
+.calendar__dates > .header__day {
     width: 13.34%;
     padding-left: .5em;
     color: #999;
     font-weight: 700;
+}
+
+.calendar__header > .calendar__controls {
+    display: flex;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-top: 1em;
+    align-items: center;
+}
+
+.calendar__header > .calendar__controls > .calendar__weekcontrol {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 50px;
+    color: #c5c5c5;
+    margin-right: .5em;
+    transition: background-color .2s, color .2s;
+    cursor: pointer;
+    font-size: 1.35rem;
+}
+
+.calendar__header > .calendar__controls > .calendar__actualweek {
+    font-weight: 700;
+    margin-left: .5em;
+} 
+
+.calendar__header > .calendar__controls > .calendar__weekcontrol:hover {
+    background-color: #ececec;
+    color: #999;
 }
 
 .calendar__body { 
@@ -82,7 +119,7 @@
 .calendar .event__dialog {
     position: absolute;
     background: white;
-    width: 200px;
+    width: 300px;
     box-shadow: 0px 0px 36px 7px rgba(0,0,0,0.2);
     border-radius: 10px;
     overflow: hidden;
@@ -100,24 +137,11 @@
     flex: 1;
 }
 
-.event__dialog > header > .header__title > h3 {
+.event__dialog > header  > h3 {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.event__dialog > header > .header__close {
-    width: 30px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.event__dialog > header > .header__close > svg {
-    top: 3px;
-    position: relative;
-    color: #94d9ff;
-    transition: color .2s;
-    cursor: pointer;
-}
 
 .event__dialog > header > .header__close > svg:hover {
     color: white;
@@ -140,11 +164,31 @@
 }
 
 .event__dialog > .event__body > .event__metadata > .meta__icon > svg {
-    color:#bcbcbc;
+    color:#999;
 }
 
 .event__dialog > .event__body > .event__metadata > .meta__value {
-    color: #666;
+    color: #333;
+}
+
+.event__dialog > .event__body > .closeBtn {
+    background-color: white;
+    font-family: inherit;
+    color: #00a5ff;
+    border: 1px solid #00a5ff;
+    padding: .75em;
+    font-size: inherit;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .2s, color .2s, border-color .2s;
+    margin: auto 0 auto auto;
+    display: block;
+}
+
+.event__dialog > .event__body > .closeBtn:hover {
+    background-color: #0085ce;
+    color: white;
+    border-color: #0085ce;
 }
 
 

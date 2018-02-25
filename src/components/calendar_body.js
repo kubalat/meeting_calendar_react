@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 export default class CalendarBody extends Component {
     render() {
+        const { showDialog } = this.props;
+
         return (
             <div className="calendar__body">
                 <div className="calendar__time">
@@ -31,10 +33,10 @@ export default class CalendarBody extends Component {
                     <div className="day__part"></div>
                     <div className="day__part"></div>
                     <div className="day__part"></div>
-                    <div className="calendar__event">Hello World</div>
-                    <div className="calendar__event_2">Hello World</div>
+                    <div className="calendar__event" onClick={ showDialog }>Hello World</div>
+                    <div className="calendar__event_2" onClick={ showDialog }>Hello World</div>
                 </div>
-                <div className="calendar__day">
+                <div className="calendar__day" >
                     <div className="day__part"></div>
                     <div className="day__part"></div>
                     <div className="day__part"></div>

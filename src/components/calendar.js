@@ -7,21 +7,27 @@ import EventDialog from './event_dialog'
 export default class Calendar extends Component {
     constructor(props) {
         super(props)
-        this.state = { isModalOpen: false, positionX: 0, positionY: 0 }
+        this.state = { isModalOpen: false, positionX: 0, positionY: 0}
       }
 
     render() {
         return (
-            <div className="calendar" onClick={ (e) => this.toggleModal(e) }>
+            <div className="calendar">
+                {/* <button type="button" onClick={ this.showDialog }>Open</button> */}
                 <CalendarHeader />
-                <CalendarBody />
-                <EventDialog isOpen={ this.state.isModalOpen } positionX={ this.state.positionX } positionY={ this.state.positionY } />
+                <CalendarBody showDialog={ this.showDialog }/>
+                <EventDialog closeDialogRequest={ this.hideDialog } isOpen={ this.state.isModalOpen } positionX={ this.state.positionX } positionY={ this.state.positionY } />
             </div>
+            
         );
     }
 
-    toggleModal(e) {
-        console.log(e.clientX);
-        this.setState({ isModalOpen: !this.state.isModalOpen, positionX: e.clientX, positionY: e.clientY });
+    showDialog = (e) => {
+        // this.setState({ isModalOpen: !this.state.isModalOpen, positionX: e.clientX, positionY: e.clientY });
+        this.setState({ isModalOpen: true, positionX: e.clientX, positionY: e.clientY });
+    }
+
+    hideDialog = () => {
+        this.setState({ isModalOpen: false});
     }
 }

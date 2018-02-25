@@ -6,6 +6,10 @@ export default class EventDialog extends Component {
             return null;
         }
 
+        const { closeDialogRequest } = this.props
+        //This do same
+        //const closeDialogRequest = this.props.closeDialogRequest;
+
         const dialogStyle = {
             top: this.props.positionY,
             left: this.props.positionX
@@ -14,8 +18,7 @@ export default class EventDialog extends Component {
         return (
             <div className="event__dialog" style={ dialogStyle }>
                 <header>
-                    <div className="header__title"><h3>Event name</h3></div>
-                    <div className="header__close"><i onClick={ () => this.closeDialog() }class="far fa-times-circle"></i></div>
+                    <h3>Event name</h3>
                 </header>
                 <div class="event__body">
                     <div className="event__metadata" id="event__time">
@@ -30,12 +33,9 @@ export default class EventDialog extends Component {
                         <div className="meta__icon"><i class="far fa-sticky-note"></i></div>
                         <div className="meta__value">This is a very big note. Olalalalalalalalala</div>
                     </div>
+                    <button type="button" className="closeBtn" onClick={ closeDialogRequest }>Close</button>
                 </div>
             </div>
         );
-    }
-
-    closeDialog() {
-        this.setState({ isModalOpen: false});
     }
 }
